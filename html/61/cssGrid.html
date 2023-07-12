@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+           display: grid;
+           grid-template: [top] 200px [top-center] 40px [center]40px [bottom-center] 200px [bottom]/ 
+                            [left]200px [left-center] 40px [center] 40px [right-center]200px[right];
+           justify-content: center;
+        }
+        .blue{
+            background-color: blue;
+            grid-row: top / center;
+            grid-column: left-center / right-center;
+        }
+        .red{
+            background-color: red;
+            grid-row: top-center / bottom-center;
+            grid-column: center / right;
+
+        }
+        .green{
+            background-color: green;
+            grid-row: center / bottom;
+            grid-column: left-center / right-center;
+        }
+        .yellow{
+            background-color: yellow;
+            grid-row: top-center / bottom-center;
+            grid-column: left / center;
+        }
+        #blue{
+            grid-row: top-center / center;
+            grid-column: left-center / center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="blue"></div>
+    <div class="red"></div>
+    <div class="green"></div>
+    <div class="yellow"></div>
+    <div class="blue" id="blue"></div>
+
+</body>
+</html>
