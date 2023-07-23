@@ -1,3 +1,4 @@
+"use strict";
 console.log(myName)
 console.log(myEmail)
 var name= prompt("Enter Your Name")
