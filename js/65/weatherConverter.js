@@ -4,11 +4,11 @@ const farenhietInput = document.getElementById("farenheit")
 const celsiusInput = document.getElementById("celsius")
 
 const celsiusToFarenheit = function(c){
-    return (c*1.8)+32
+    return Math.round((c*1.8)+32)
 }
 
 const farenheitToCelsius = function(f){
-    return (f-32)/1.8
+    return Math.round((f-32)/1.8)
 }
 
 
