@@ -6,32 +6,36 @@
    let loop  = false
    
    function event (){
-    if (loop){
+    if (!loop){
         theButton.innerText  = "Stop Changing Colors"
+        loop  = true
+        continueLoop()
+    }
+    else{
+        theButton.innerText  = "Continue Changing Colors"
         loop  = false
     }
-    startLooping()
    }
 
-   function startLooping(){
-    if (!loop){
-        loop = true
-        console.log("hello")
-        //for(let i = 0; loop;i++ ){
-            function continueLoop(){
-                if(loop){
-                    document.body.style.backgroundColor = getRandomRgb()
-                    console.log("in the loop")
-    
-                
-                    setTimeout(() => {
-                        continueLoop();
-                    }, 1000);
-                }
-            }      
-     // }
+   function startLooping() {
+    if (!loop) {
+        loop = true;
+        console.log("hello");
+        continueLoop(); // Call the continueLoop function to start the loop
     }
-   }
+}
+
+function continueLoop() {
+    if (loop) {
+        document.body.style.backgroundColor = getRandomRgb();
+        theButton.style.backgroundColor = getRandomRgb();
+        console.log("in the loop");
+        setTimeout(() => {
+            continueLoop();
+        }, 1000);
+    }
+}
+
    function getRandomRgb() {
     return `rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)})`;
   } 
