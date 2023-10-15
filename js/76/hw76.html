@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            label {
+                display: block;
+                margin: 10px 0;
+                font-weight: bold;
+            }
+
+            input {
+                width: 20%;
+                padding: 5px;
+                margin: 5px 0;
+            }
+
+            #submit {
+                background-color: #007BFF;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                cursor: pointer;
+            }
+
+            #disable {
+                margin-left: 10px;
+            }
+
+            #content {
+                margin-top: 50px;
+                padding: 10px;
+                border: 1px solid #ccc;
+            }
+        </style>
+    </head>
+    <body>
+        <label>Name: <input id="name"></label>
+        <label>Address: <input id="address"></label>
+        <label>Disable <input type="checkbox" id="disable" name="disable"></label>
+        <button id="submit">Submit</button>
+        <div id="content"></div>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="hw76.js"></script>
+    </body>
+</html>
