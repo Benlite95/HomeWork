@@ -37,7 +37,7 @@
     };
 
     people.forEach(person => {
-        console.log(`id ${person.id}, first: ${person.firstName}, last: ${person.lastName}, gender: ${person.gender ? "Male" : "Female"}, spouse: ${person.spouse.firstName}, spouse_id: ${person.spouse.id}`);
+        console.log(`id ${person.id}, first: ${person.firstName}, last: ${person.lastName}, gender: ${person.gender ? "Female" : "Male"}, spouse: ${person.spouse.firstName}, spouse_id: ${person.spouse.id}`);
     });
 
 }());  
