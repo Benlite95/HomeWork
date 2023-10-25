@@ -1,0 +1,24 @@
+[
+    {
+      "id": 0,
+      "name": "Cholent",
+      "description": "Delicious Hot Cholent",
+      "ingredients": "Beans,Barley,Meat,Salt,Pepper",
+      "picture": "images/chicken.jpeg"
+    },
+    {
+        "id": 1,
+        "name": "Kugel",
+        "description": "Delicious Hot Kugel",
+        "ingredients": "Potatoes,Oil,Salt",
+        "picture": "images/steak.jpeg"
+      },
+      {
+        "id": 2,
+        "name": "Kishke",
+        "description": "Delicious Hot Kishke",
+        "ingredients": "Flour,suger,Oil",
+        "picture": "images/hamburger.jpeg"
+      }
+  ]
+  
