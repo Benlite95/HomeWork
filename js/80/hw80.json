@@ -1,0 +1,54 @@
+[
+    {
+      "id": 0,
+      "name": "El Hannar Hazzeh",
+      "description": "Sung By Motty Stienmetz and Levy Falkowitz",
+      "picture": "media/el_hanar_hazeh.jpg",
+      "video": "media/ElHanaarHazeh.mp4"
+    },
+    {
+        "id": 1,
+        "name": "Yesh Tikva",
+        "description": "Sung By Benny Friedman",
+        "picture": "media/yesh_tikva.jpeg",
+        "video": "media/yesh_tikvah.mp4"
+      },
+      {
+        "id": 2,
+        "name": "Kol Zman",
+        "description": "Sung By Motty Stienmetz",
+        "picture": "media/kol_zman.jpg",
+        "video": "media/kolzman.mp4"
+      },
+      {
+        "id": 3,
+        "name": "Ivri Anoichy",
+        "description": "Sung By Benny Friedman",
+        "picture": "media/ivri.jpg",
+        "video": "media/ivri.mp4"
+      },
+      {
+        "id": 4,
+        "name": "El Hannar Hazzeh",
+        "description": "Sung By Motty Stienmetz and Levy Falkowitz",
+        "picture": "media/el_hanar_hazeh.jpg",
+        "video": "media/ElHanaarHazeh.mp4"
+      },
+      {
+        "id": 5,
+        "name": "Yesh Tikva",
+        "description": "Sung By Benny Friedman",
+        "picture": "media/yesh_tikva.jpeg",
+        "video": "media/yesh_tikvah.mp4"
+      },
+      {
+        "id": 6,
+        "name": "Kol Zman",
+        "description": "Sung By Motty Stienmetz",
+        "picture": "media/kol_zman.jpg",
+        "video": "media/kolzman.mp4"
+      }
+
+
+  ]
+  
