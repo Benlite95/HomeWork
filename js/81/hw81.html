@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      html, body, #map {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+      }
+      .sideNav{
+        float: left;
+        width: 20%;
+        height: 100%;
+        border-right: 1px solid black;
+        box-sizing: border-box;
+
+      }
+
+      .sideNav li{
+        height: 100px;
+        overflow: auto;      }
+
+      #map{
+        float: left;
+        width: 80%;
+
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="sideNav">
+      <input type="text" id ="search">
+      <button id="submit">Search</button>
+      <ul id="placesList"></ul>
+    </div>
+    <div id="map"></div>
+
+    <script>
+      (g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })({
+        key: "AIzaSyB0T7TfsdOimllI86Xpe8EI3MnIDqo5eOI",
+        v: "weekly",
+      });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="hw81.js"></script>
+  </body>
+
+</html>
