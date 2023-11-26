@@ -12,7 +12,7 @@
             background-size: cover;
         }
 
-        #addantsForm, #addAmountDiv{
+        #addantsForm{
             position: absolute;
             top: 20px;
             left: 20px;
@@ -28,12 +28,13 @@
 <body >
     <form id="addantsForm">
         <label>
-          color: <input id="color" type="color">
+          color: <input id="color" type="color" >
         </label>
         <label>
           amount: <input id="amount" type="number" min="1" max="1000" value="100" required>
         </label>
         <button>add</button>
+
       </form>
     <canvas id="theCanvas"></canvas>
     <script src="ants.js"></script>

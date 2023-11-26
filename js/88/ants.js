@@ -1,3 +1,6 @@
+(function(){
+    'use strict'
+
 const theCanvas = document.querySelector('#theCanvas');
 const context = theCanvas.getContext('2d');
 
@@ -15,8 +18,8 @@ class Ant{
         this.number = number
         this.width  = 1
         this.height = 3
-        this.x = Ant.getRandomNumber(1,1500)
-        this.y = Ant.getRandomNumber(1,1500)
+        this.x = Ant.getRandomNumber(1, window.innerWidth)
+        this.y = Ant.getRandomNumber(1, window.innerHeight)
         this.color = color;
         this.times = 0
         this.dx = 0
@@ -26,34 +29,31 @@ class Ant{
     draw(){
         context.fillRect(this.x,this.y,this.width,this.height)
         context.fillStyle = this.color;
+        this.fight()
     }
     move(dx,dy){
-        this.x += dx
-        this.y += dy
+        if (this.x < this.width ) {
+            this.x ++;
+        }
+        else if( this.x > window.innerWidth - this.width){
+            this.x--
+        }
+        else if (this.y < this.height  ) {
+            this.y++
+        }   
+        else if (this.y > window.innerHeight - this.height){
+            this.y--
+         } 
+         else{
+            this.x += dx
+            this.y += dy
+         }
         this.times --;
         this.draw()
-            ants.forEach(a=>{
-                if( this.collision(a)  && this.color != a.color ){
-                    if(this.width > a.width ){
-                        this.width+=a.width
-                        this.height+=a.height
-                        a.erase()
-                    }
-                    else{
-                        a.width+= this.width
-                        a.height+= this.height
-                        this.erase()
-                    }
-                    return
-                }
-            }
-            )
-        };
+    };
      erase(){
         const index = ants.indexOf(this);
-        console.log(index,ants[index].number)
         ants.splice(index,1)
-       
      }     
           
      collision(ant) {
@@ -65,8 +65,23 @@ class Ant{
         )
       }
          
-     
-
+     fight(){
+        ants.forEach(a=>{
+            if( this.collision(a)  && this.color != a.color ){
+                if(this.width > a.width ){
+                    this.width+=a.width
+                    this.height+=a.height
+                    a.erase()
+                }
+                else{
+                    a.width+= this.width
+                    a.height+= this.height
+                    this.erase()
+                }
+                return
+            }
+        })
+     }
     static getRandomNumber(min,max){
         return Math.floor(( (max+1) - min) * Math.random() + min)
     }
@@ -82,18 +97,19 @@ document.querySelector('#addantsForm').addEventListener('submit', e => {
 });
 
 setInterval(()=>{
-context.clearRect(0,0,theCanvas.width,theCanvas.height)
-ants.forEach(a => {
-    if(a.times == 0){
-       a.dx =  Ant.getRandomNumber(-1,1)
-       a.dy = Ant.getRandomNumber(-1,1)
-       a.times = Ant.getRandomNumber(1,30)
-    }
-    a.move(a.dx,a.dy)
-})},100)
+    context.clearRect(0,0,theCanvas.width,theCanvas.height)
+    ants.forEach(a => {
+        if(a.times == 0){
+        a.dx =  Ant.getRandomNumber(-1,1)
+        a.dy = Ant.getRandomNumber(-1,1)
+        a.times = Ant.getRandomNumber(1,30)
+        }
+        a.move(a.dx,a.dy)
+    })},100
+)
 
 
-
+}())
 
 
 
