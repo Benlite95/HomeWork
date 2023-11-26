@@ -5,8 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-    </style>
-</head>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: url('sandBackground.jpg') no-repeat center center fixed; 
+            background-size: cover;
+        }
+
+        #addantsForm, #addAmountDiv{
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 1;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        canvas {
+            display: block;
+        }
+    </style></head>
 <body >
     <form id="addantsForm">
         <label>

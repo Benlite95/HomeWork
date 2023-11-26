@@ -33,7 +33,7 @@ class Ant{
         this.times --;
         this.draw()
             ants.forEach(a=>{
-                if( this.collision(a)  && this.number != a.number){
+                if( this.collision(a)  && this.color != a.color ){
                     if(this.width > a.width ){
                         this.width+=a.width
                         this.height+=a.height
@@ -79,7 +79,6 @@ document.querySelector('#addantsForm').addEventListener('submit', e => {
   for(let i = 1;i < +amountInput.value + 1;i++){
     ants.push(new Ant(i+numberOfAnts,colorInput.value))
   }
-
 });
 
 setInterval(()=>{
