@@ -11,3 +11,4 @@ class Person{
 }
 let p = new myPerson("Elon","Musk",52,"123 Main Street")
 p.print()
+import $ from 'messagebox.js'
